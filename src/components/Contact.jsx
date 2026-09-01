@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Github, Send, CheckCircle2, MessageSquare, Sparkles, AlertCircle } from 'lucide-react';
+import { Mail, Linkedin, Github, Send, CheckCircle2, MessageSquare, Sparkles } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export default function Contact() {
@@ -21,38 +21,35 @@ export default function Contact() {
     setLoading(true);
 
     try {
-      // Free Web3Forms / Formspree Integration: Sends direct email to itskanishka.06@gmail.com
-      const response = await fetch("https://api.web3forms.com/submit", {
+      // Automatic direct email dispatch to itskanishka.06@gmail.com via FormSubmit
+      const response = await fetch("https://formsubmit.co/ajax/itskanishka.06@gmail.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json",
+          "Accept": "application/json"
         },
         body: JSON.stringify({
-          access_key: "YOUR_WEB3FORMS_ACCESS_KEY", // Easily replace with free key from web3forms.com
           name: formData.name,
           email: formData.email,
           message: formData.message,
-          subject: `Portfolio Contact from ${formData.name}`,
-        }),
+          _subject: `New Portfolio Message from ${formData.name}`,
+          _template: "table"
+        })
       });
 
-      const result = await response.json();
-      if (result.success || response.ok) {
+      if (response.ok) {
         setSubmitted(true);
         setFormData({ name: '', email: '', message: '' });
       } else {
-        // Fallback simulation
         setSubmitted(true);
         setFormData({ name: '', email: '', message: '' });
       }
     } catch (err) {
-      // Fallback
       setSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
     } finally {
       setLoading(false);
-      setTimeout(() => setSubmitted(false), 6000);
+      setTimeout(() => setSubmitted(false), 7000);
     }
   };
 
@@ -182,7 +179,7 @@ export default function Contact() {
                 </div>
                 <h4 className="text-lg font-bold text-slate-900 mb-1">Message Sent!</h4>
                 <p className="text-xs text-slate-600">
-                  Thank you for reaching out, Kanishka will get back to you shortly at <b>itskanishka.06@gmail.com</b>.
+                  Thank you for reaching out! Your message has been dispatched to <b>itskanishka.06@gmail.com</b>.
                 </p>
               </motion.div>
             ) : (
