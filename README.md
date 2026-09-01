@@ -1,88 +1,86 @@
-# Kanishka — Personal Portfolio Website
+<div align="center">
 
-A modern, highly professional AI/ML and Backend Software Engineer portfolio built with **React**, **Vite**, **Tailwind CSS**, and **Framer Motion**.
+  # ⚡ Kanishka — Personal Portfolio
+
+  **AI/ML • Backend Development • GenAI • RAG**
+
+  <p align="center">
+    <i>Final-year Computer Science Engineering student building intelligent systems, scalable backend applications, and AI-powered products.</i>
+  </p>
+
+  [![React](https://img.shields.io/badge/React-19.0-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
+  [![Vite](https://img.shields.io/badge/Vite-6.1-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38BDF8?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+  [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.4-0055FF?style=flat-square&logo=framer&logoColor=white)](https://www.framer.com/motion/)
+  [![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
+
+</div>
 
 ---
 
-## 🚀 How to Upload to GitHub & Deploy Live
+## 🌟 Highlights
 
-Follow these simple steps to push your portfolio to GitHub and host it live on the web for free.
+- ⚡ **Interactive AI Particle Canvas:** Custom HTML5 canvas rendering electric blue neural nodes at 60 FPS.
+- 🎨 **Electric Blue & Obsidian Theme:** Crisp, recruiter-friendly light theme with glassmorphism cards.
+- 🤖 **Autonomous AI Agent & RAG Showcase:** Features **HealPipe** (Autonomous CI/CD Debugging Agent) and **Ostrich** (Hierarchy-aware RAG Workspace).
+- 🏆 **Verified DSA Track Record:** 500+ solved problems, LeetCode (1500+), Codeforces (1100+).
+- 📄 **1-Click Resume Viewer:** Integrated printable resume page with PDF export support.
+- 📱 **Fully Responsive:** Smooth scrolling, section scrollspy, and mobile drawer navigation.
 
 ---
 
-### Step 1: Open Terminal in your Project Folder
+## 🛠️ Tech Stack
+
+| Domain | Technologies |
+| :--- | :--- |
+| **Frontend** | React 19, Vite, Tailwind CSS, Framer Motion, Lucide Icons |
+| **Backend & APIs** | Node.js, Express.js, FastAPI, REST APIs |
+| **AI / ML & GenAI** | RAG, LLMs, Agentic AI, PyTorch, TensorFlow, Scikit-learn, OpenCV |
+| **Databases** | MongoDB, PostgreSQL, Supabase |
+| **DevOps & Tools** | Docker, AWS, GitHub Actions, Git, Power BI |
+
+---
+
+## 🚀 Quick Start
+
 ```bash
-cd /Users/kanishka/.gemini/antigravity/scratch/kanishka-portfolio
+# 1. Clone the repository
+git clone https://github.com/Kanishka2004/kanishka-portfolio.git
+
+# 2. Navigate to project directory
+cd kanishka-portfolio
+
+# 3. Install dependencies
+npm install
+
+# 4. Start local development server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser to view the application.
+
+---
+
+## 📂 Project Structure
+
+```text
+kanishka-portfolio/
+├── public/                # Static assets & formatted HTML resume viewer
+├── src/
+│   ├── components/        # Hero, About, Skills, Projects, Contact, Canvas
+│   ├── data/              # Centralized portfolioData.js configuration
+│   ├── App.jsx            # Main application root
+│   └── index.css          # Tailwind base & glassmorphism utilities
+├── package.json
+└── vite.config.js
 ```
 
 ---
 
-### Step 2: Initialize Git & Commit Your Code
+## 📬 Connect with Kanishka
 
-Run the following commands in your terminal:
-
-```bash
-# 1. Initialize git
-git init
-
-# 2. Add all project files
-git add .
-
-# 3. Commit your code
-git commit -m "Initial commit - Kanishka Personal Portfolio"
-```
-
----
-
-### Step 3: Push to GitHub
-
-1. Go to [GitHub New Repository](https://github.com/new).
-2. Set the **Repository Name** as `kanishka-portfolio` (or `portfolio`).
-3. Leave it as **Public** and **do NOT check** "Initialize with README".
-4. Click **Create repository**.
-5. Copy the commands shown on GitHub under **"…or push an existing repository from the command line"**, which will look like:
-
-```bash
-git branch -M main
-git remote add origin https://github.com/Kanishka2004/kanishka-portfolio.git
-git push -u origin main
-```
-
----
-
-### Step 4: Deploy Live for Free
-
-#### Option A: Vercel (Recommended — Easiest & Fastest ⚡)
-1. Go to [Vercel](https://vercel.com) and log in with your GitHub account.
-2. Click **Add New...** -> **Project**.
-3. Import your `kanishka-portfolio` repository.
-4. Framework Preset will automatically be detected as **Vite**.
-5. Click **Deploy**.
-6. In ~30 seconds, your site will be live at `https://kanishka-portfolio.vercel.app`!
-
----
-
-#### Option B: Netlify
-1. Go to [Netlify](https://netlify.com) and log in with GitHub.
-2. Click **Add new site** -> **Import an existing project**.
-3. Choose **GitHub** and select `kanishka-portfolio`.
-4. Build command: `npm run build`, Publish directory: `dist`.
-5. Click **Deploy kanishka-portfolio**.
-
----
-
-#### Option C: GitHub Pages
-If you want to host directly on GitHub Pages (`https://kanishka2004.github.io/kanishka-portfolio`):
-1. Install `gh-pages`:
-   ```bash
-   npm install -D gh-pages
-   ```
-2. Add these scripts to your `package.json`:
-   ```json
-   "predeploy": "npm run build",
-   "deploy": "gh-pages -d dist"
-   ```
-3. Run deploy:
-   ```bash
-   npm run deploy
-   ```
+- 📧 **Primary Email:** [kanishka.code06@gmail.com](mailto:kanishka.code06@gmail.com)
+- 📧 **Secondary Email:** [kanishkaofficial2003@gmail.com](mailto:kanishkaofficial2003@gmail.com)
+- 💼 **LinkedIn:** [linkedin.com/in/kanishka-singh-612668257](https://www.linkedin.com/in/kanishka-singh-612668257/)
+- 🐙 **GitHub:** [github.com/Kanishka2004](https://github.com/Kanishka2004)
+- 🧩 **LeetCode:** [leetcode.com/u/Kanishka2004](https://leetcode.com/u/Kanishka2004/)
