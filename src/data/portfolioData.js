@@ -4,13 +4,13 @@ export const portfolioData = {
     title: "AI/ML • Backend Development • GenAI • RAG",
     tagline: "Final-year Computer Science student building intelligent systems, scalable backend applications, and AI-powered products.",
     location: "Mathura, India",
-    email: "kanishka.code06@gmail.com",
-    secondaryEmail: "kanishkaofficial2003@gmail.com",
-    github: "https://github.com/Kanishka2004",
+    email: "itskanishka.06@gmail.com",
+    secondaryEmail: "kanishka.code06@gmail.com",
+    github: "https://github.com/ITSKANISHKA",
     linkedin: "https://www.linkedin.com/in/kanishka-singh-612668257/",
-    leetcode: "https://leetcode.com/u/Kanishka2004/",
-    codeforces: "https://codeforces.com/profile/Kanishka",
-    resumeUrl: "/Kanishka_Resume.pdf",
+    leetcode: "https://leetcode.com/u/n7VPPMuNJj/",
+    codeforces: "https://codeforces.com/profile/kanishka__",
+    resumeUrl: "/Kanishka_Resume.html",
   },
 
   about: {
@@ -95,8 +95,8 @@ export const portfolioData = {
         "Integrated Docker-based execution with CI/CD log analysis",
         "Autonomous debugging and validation workflow execution"
       ],
-      github: "https://github.com/Kanishka2004",
-      demo: "https://github.com/Kanishka2004",
+      github: "https://github.com/ITSKANISHKA",
+      demo: "https://github.com/ITSKANISHKA",
       gradient: "from-blue-600/10 via-cyan-500/10 to-slate-900/10",
       accentColor: "#2563EB"
     },
@@ -114,8 +114,8 @@ export const portfolioData = {
         "JWT authentication & Role-Based Access Control (RBAC)",
         "Dockerized deployment with Razorpay subscription integration"
       ],
-      github: "https://github.com/Kanishka2004",
-      demo: "https://github.com/Kanishka2004",
+      github: "https://github.com/ITSKANISHKA",
+      demo: "https://github.com/ITSKANISHKA",
       gradient: "from-cyan-500/10 via-blue-600/10 to-indigo-600/10",
       accentColor: "#0284C7"
     },
@@ -132,8 +132,8 @@ export const portfolioData = {
         "Multi-user architecture designed to scale to 1,000+ active users",
         "Product search, filtering, sorting, and pagination for 500+ product records"
       ],
-      github: "https://github.com/Kanishka2004",
-      demo: "https://github.com/Kanishka2004",
+      github: "https://github.com/ITSKANISHKA",
+      demo: "https://github.com/ITSKANISHKA",
       gradient: "from-slate-900/10 via-blue-700/10 to-sky-500/10",
       accentColor: "#0F172A"
     }

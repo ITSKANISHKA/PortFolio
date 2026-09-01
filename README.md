@@ -45,7 +45,7 @@
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/Kanishka2004/kanishka-portfolio.git
+git clone https://github.com/ITSKANISHKA/kanishka-portfolio.git
 
 # 2. Navigate to project directory
 cd kanishka-portfolio
@@ -61,26 +61,11 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to view the 
 
 ---
 
-## 📂 Project Structure
-
-```text
-kanishka-portfolio/
-├── public/                # Static assets & formatted HTML resume viewer
-├── src/
-│   ├── components/        # Hero, About, Skills, Projects, Contact, Canvas
-│   ├── data/              # Centralized portfolioData.js configuration
-│   ├── App.jsx            # Main application root
-│   └── index.css          # Tailwind base & glassmorphism utilities
-├── package.json
-└── vite.config.js
-```
-
----
-
 ## 📬 Connect with Kanishka
 
-- 📧 **Primary Email:** [kanishka.code06@gmail.com](mailto:kanishka.code06@gmail.com)
-- 📧 **Secondary Email:** [kanishkaofficial2003@gmail.com](mailto:kanishkaofficial2003@gmail.com)
+- 📧 **Primary Email:** [itskanishka.06@gmail.com](mailto:itskanishka.06@gmail.com)
+- 📧 **Secondary Email:** [kanishka.code06@gmail.com](mailto:kanishka.code06@gmail.com)
 - 💼 **LinkedIn:** [linkedin.com/in/kanishka-singh-612668257](https://www.linkedin.com/in/kanishka-singh-612668257/)
-- 🐙 **GitHub:** [github.com/Kanishka2004](https://github.com/Kanishka2004)
-- 🧩 **LeetCode:** [leetcode.com/u/Kanishka2004](https://leetcode.com/u/Kanishka2004/)
+- 🐙 **GitHub:** [github.com/ITSKANISHKA](https://github.com/ITSKANISHKA)
+- 🧩 **LeetCode:** [leetcode.com/u/n7VPPMuNJj](https://leetcode.com/u/n7VPPMuNJj/)
+- ⚔️ **Codeforces:** [codeforces.com/profile/kanishka__](https://codeforces.com/profile/kanishka__)
