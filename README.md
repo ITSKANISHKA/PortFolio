@@ -65,7 +65,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to view the 
 
 - 📧 **Primary Email:** [itskanishka.06@gmail.com](mailto:itskanishka.06@gmail.com)
 - 📧 **Secondary Email:** [kanishka.code06@gmail.com](mailto:kanishka.code06@gmail.com)
-- 💼 **LinkedIn:** [linkedin.com/in/kanishka-singh-612668257](https://www.linkedin.com/in/kanishka-singh-612668257/)
+- 💼 **LinkedIn:** [linkedin.com/in/itskanishka06](https://www.linkedin.com/in/itskanishka06/)
 - 🐙 **GitHub:** [github.com/ITSKANISHKA](https://github.com/ITSKANISHKA)
 - 🧩 **LeetCode:** [leetcode.com/u/n7VPPMuNJj](https://leetcode.com/u/n7VPPMuNJj/)
 - ⚔️ **Codeforces:** [codeforces.com/profile/kanishka__](https://codeforces.com/profile/kanishka__)
