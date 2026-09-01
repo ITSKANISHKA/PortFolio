@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Github, Send, CheckCircle2, MessageSquare, Sparkles } from 'lucide-react';
+import { Mail, Linkedin, Github, Send, MessageSquare, Sparkles } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export default function Contact() {
@@ -11,47 +11,6 @@ export default function Contact() {
     email: '',
     message: ''
   });
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) return;
-
-    setLoading(true);
-
-    try {
-      // Automatic direct email dispatch to itskanishka.06@gmail.com via FormSubmit
-      const response = await fetch("https://formsubmit.co/ajax/itskanishka.06@gmail.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          _subject: `New Portfolio Message from ${formData.name}`,
-          _template: "table"
-        })
-      });
-
-      if (response.ok) {
-        setSubmitted(true);
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        setSubmitted(true);
-        setFormData({ name: '', email: '', message: '' });
-      }
-    } catch (err) {
-      setSubmitted(true);
-      setFormData({ name: '', email: '', message: '' });
-    } finally {
-      setLoading(false);
-      setTimeout(() => setSubmitted(false), 7000);
-    }
-  };
 
   return (
     <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 relative z-10 bg-slate-50/70">
@@ -164,84 +123,76 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7 bg-white rounded-3xl p-8 border border-slate-200 shadow-xs"
           >
-            <h3 className="text-xl font-bold text-slate-900 font-outfit mb-6">
+            <h3 className="text-xl font-bold text-slate-900 font-outfit mb-2">
               Send a Message
             </h3>
+            <p className="text-xs text-slate-500 mb-6">
+              Messages submitted here are routed directly to <b>itskanishka.06@gmail.com</b>.
+            </p>
 
-            {submitted ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="bg-blue-50 border border-blue-200 rounded-2xl p-6 text-center"
+            <form
+              action="https://formsubmit.co/itskanishka.06@gmail.com"
+              method="POST"
+              className="space-y-5"
+            >
+              {/* FormSubmit Configuration */}
+              <input type="hidden" name="_subject" value="New Portfolio Message for Kanishka!" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  placeholder="e.g. Alex Morgan"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="w-full px-4 py-3 bg-slate-50 rounded-xl text-slate-800 text-sm border border-slate-200 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                  Your Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="e.g. alex@company.com"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="w-full px-4 py-3 bg-slate-50 rounded-xl text-slate-800 text-sm border border-slate-200 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                  Message
+                </label>
+                <textarea
+                  rows={4}
+                  name="message"
+                  required
+                  placeholder="Tell me about your project, role, or query..."
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  className="w-full px-4 py-3 bg-slate-50 rounded-xl text-slate-800 text-sm border border-slate-200 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all resize-none"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-white bg-slate-900 hover:bg-blue-600 transition-all shadow-md active:scale-[0.99]"
               >
-                <div className="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center mx-auto mb-3">
-                  <CheckCircle2 className="w-6 h-6" />
-                </div>
-                <h4 className="text-lg font-bold text-slate-900 mb-1">Message Sent!</h4>
-                <p className="text-xs text-slate-600">
-                  Thank you for reaching out! Your message has been dispatched to <b>itskanishka.06@gmail.com</b>.
-                </p>
-              </motion.div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div>
-                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                    Your Name
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="e.g. Alex Morgan"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 bg-slate-50 rounded-xl text-slate-800 text-sm border border-slate-200 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                    Your Email
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    placeholder="e.g. alex@company.com"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 bg-slate-50 rounded-xl text-slate-800 text-sm border border-slate-200 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    rows={4}
-                    required
-                    placeholder="Tell me about your project, role, or query..."
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3 bg-slate-50 rounded-xl text-slate-800 text-sm border border-slate-200 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all resize-none"
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-white bg-slate-900 hover:bg-blue-600 transition-all shadow-md active:scale-[0.99] disabled:opacity-50"
-                >
-                  {loading ? (
-                    <span>Sending...</span>
-                  ) : (
-                    <>
-                      <span>Send Message</span>
-                      <Send className="w-4 h-4" />
-                    </>
-                  )}
-                </button>
-              </form>
-            )}
+                <span>Send Message</span>
+                <Send className="w-4 h-4" />
+              </button>
+            </form>
           </motion.div>
         </div>
       </div>
