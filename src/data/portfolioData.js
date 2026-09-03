@@ -198,7 +198,7 @@ export const portfolioData = {
         "Product search, filtering, sorting, and pagination for 500+ product records"
       ],
       github: "https://github.com/ITSKANISHKA",
-      demo: "https://github.com/ITSKANISHKA",
+      demo: "https://nova-kappa-ebon.vercel.app/",
       gradient: "from-slate-900/10 via-blue-700/10 to-sky-500/10",
       accentColor: "#0F172A"
     }
