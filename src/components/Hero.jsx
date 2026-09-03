@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Mail, Github, Linkedin, Code, Sparkles, Terminal } from 'lucide-react';
+import { ArrowRight, Mail, Sparkles, Terminal, Code } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export default function Hero() {
-  const { name, title, tagline, github, linkedin, leetcode, email, secondaryEmail } = portfolioData.personal;
+  const { name, title, tagline } = portfolioData.personal;
 
   return (
-    <section id="hero" className="relative min-h-[90vh] flex items-center justify-center pt-28 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section id="hero" className="relative min-h-[85vh] flex items-center justify-center pt-28 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Ambient Blue Background Glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-gradient-to-tr from-blue-400/20 via-sky-300/15 to-indigo-200/15 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse-slow"></div>
 
@@ -68,7 +68,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10"
         >
           <a
             href="#projects"
@@ -87,78 +87,22 @@ export default function Hero() {
           </a>
         </motion.div>
 
-        {/* Social Icons Bar */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="flex items-center justify-center gap-4 pt-4 border-t border-slate-200/80 max-w-lg mx-auto flex-wrap"
-        >
-          <a
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-2xl bg-white hover:bg-slate-900 text-slate-700 hover:text-white border border-slate-200 shadow-xs transition-all transform hover:scale-110"
-            title="GitHub Profile"
-          >
-            <Github className="w-5 h-5" />
-          </a>
-
-          <a
-            href={linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-2xl bg-white hover:bg-[#0A66C2] text-slate-700 hover:text-white border border-slate-200 shadow-xs transition-all transform hover:scale-110"
-            title="LinkedIn Profile"
-          >
-            <Linkedin className="w-5 h-5" />
-          </a>
-
-          <a
-            href={leetcode}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-2xl bg-white hover:bg-[#FFA116] text-slate-700 hover:text-white border border-slate-200 shadow-xs transition-all transform hover:scale-110"
-            title="LeetCode Profile"
-          >
-            <Code className="w-5 h-5" />
-          </a>
-
-          <a
-            href={`mailto:${email}`}
-            className="px-3.5 py-2.5 rounded-2xl bg-white hover:bg-blue-600 text-slate-700 hover:text-white border border-slate-200 shadow-xs transition-all flex items-center gap-2 text-xs font-semibold"
-            title="Primary Email"
-          >
-            <Mail className="w-4 h-4" />
-            <span>{email}</span>
-          </a>
-
-          <a
-            href={`mailto:${secondaryEmail}`}
-            className="px-3.5 py-2.5 rounded-2xl bg-white hover:bg-blue-600 text-slate-700 hover:text-white border border-slate-200 shadow-xs transition-all flex items-center gap-2 text-xs font-semibold"
-            title="Secondary Email"
-          >
-            <Mail className="w-4 h-4 text-blue-600" />
-            <span>{secondaryEmail}</span>
-          </a>
-        </motion.div>
-
         {/* Quick Highlights Pills */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-12 flex flex-wrap justify-center items-center gap-3 text-xs font-mono text-slate-600"
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="flex flex-wrap justify-center items-center gap-3 text-xs font-mono text-slate-600"
         >
-          <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200 shadow-2xs">
+          <span className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white border border-slate-200 shadow-2xs">
             <Terminal className="w-3.5 h-3.5 text-blue-600" />
             FastAPI / Node.js
           </span>
-          <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200 shadow-2xs">
+          <span className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white border border-slate-200 shadow-2xs">
             <Sparkles className="w-3.5 h-3.5 text-sky-600" />
             RAG & GenAI Pipelines
           </span>
-          <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200 shadow-2xs">
+          <span className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white border border-slate-200 shadow-2xs">
             <Code className="w-3.5 h-3.5 text-indigo-600" />
             LeetCode 1500+ | Codeforces 1100+
           </span>
