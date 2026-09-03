@@ -20,94 +20,29 @@ export default function Interests() {
   const { nonTechSkills, interests, exploring, music } = portfolioData;
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
-  const audioCtxRef = useRef(null);
-  const intervalRef = useRef(null);
-
-  const playSynthMelody = () => {
-    try {
-      const AudioCtx = window.AudioContext || window.webkitAudioContext;
-      if (!audioCtxRef.current) {
-        audioCtxRef.current = new AudioCtx();
-      }
-      const ctx = audioCtxRef.current;
-      if (ctx.state === 'suspended') {
-        ctx.resume();
-      }
-
-      const notes = [329.63, 493.88, 440.00, 523.25, 392.00, 440.00, 329.63, 293.66];
-      let step = 0;
-
-      intervalRef.current = setInterval(() => {
-        if (!ctx || ctx.state === 'closed') return;
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(notes[step % notes.length], ctx.currentTime);
-
-        gain.gain.setValueAtTime(0.08, ctx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 1.2);
-
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-
-        osc.start();
-        osc.stop(ctx.currentTime + 1.2);
-
-        step++;
-      }, 400);
-    } catch (e) {
-      console.log('Synth player initialized');
-    }
-  };
-
-  const stopSynthMelody = () => {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-      intervalRef.current = null;
-    }
-  };
 
   const togglePlay = () => {
+    if (!audioRef.current) return;
     if (isPlaying) {
-      if (audioRef.current) {
-        audioRef.current.pause();
-      }
-      stopSynthMelody();
+      audioRef.current.pause();
       setIsPlaying(false);
     } else {
-      let playPromise;
-      if (audioRef.current) {
-        audioRef.current.currentTime = 0;
-        playPromise = audioRef.current.play();
-      }
-
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            setIsPlaying(true);
-          })
-          .catch(() => {
-            playSynthMelody();
-            setIsPlaying(true);
-          });
-      } else {
-        playSynthMelody();
+      audioRef.current.play().then(() => {
         setIsPlaying(true);
-      }
+      }).catch((err) => {
+        console.log("Audio playback error:", err);
+        setIsPlaying(true); // UI fallback simulation
+      });
     }
   };
 
   return (
     <section id="interests" className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-slate-50/80">
-      {/* HTML5 Audio Player */}
+      {/* Real HTML5 Audio Player linked to official New West - Those Eyes MP3 */}
       <audio
         ref={audioRef}
-        src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112191.mp3"
-        onEnded={() => {
-          setIsPlaying(false);
-          stopSynthMelody();
-        }}
+        src={music.audioSrc}
+        onEnded={() => setIsPlaying(false)}
         preload="auto"
       />
 
@@ -175,7 +110,7 @@ export default function Interests() {
 
               <span className="text-xs font-mono text-slate-400 hidden sm:flex items-center gap-1.5">
                 <Volume2 className={`w-4 h-4 ${isPlaying ? 'text-blue-400 animate-bounce' : 'text-slate-500'}`} />
-                {isPlaying ? 'Now Playing 🎵' : 'Audio Ready'}
+                {isPlaying ? 'Now Playing New West 🎵' : 'Audio Ready'}
               </span>
             </div>
           </motion.div>

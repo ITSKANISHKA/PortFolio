@@ -107,7 +107,7 @@ export const portfolioData = {
     title: "Those Eyes",
     artist: "New West",
     badge: "CURRENTLY LISTENING TO",
-    audioSrc: "https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112191.mp3"
+    audioSrc: "https://archive.org/download/kehlani-nights-like-this-lyrics-ft.-ty-dolla-mp-3-160-k/New%20West%20-%20Those%20Eyes%28MP3_128K%29%28MP3_128K%29.mp3"
   },
 
   exploring: [
