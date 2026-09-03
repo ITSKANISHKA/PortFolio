@@ -80,6 +80,52 @@ export const portfolioData = {
     }
   ],
 
+  nonTechSkills: [
+    {
+      title: "Leadership & Event Coordination",
+      description: "Coordinated GLA University Tech Fest (Tech-Navya 2025), steering event logistics, schedule planning, and managing 50+ participants.",
+      icon: "Users"
+    },
+    {
+      title: "Hackathon Evaluation & Management",
+      description: "Supervised Internal Smart India Hackathon 2024, evaluating technical projects, managing judging workflows, and mentoring participant teams.",
+      icon: "Trophy"
+    },
+    {
+      title: "Cross-Functional Collaboration",
+      description: "Effective communication and teamwork across multidisciplinary engineering teams, technical writing, and public presentation.",
+      icon: "MessageSquare"
+    },
+    {
+      title: "Strategic Problem Solving",
+      description: "Analytical decision-making under high-pressure buildathons, rapid prototyping, and methodical task execution.",
+      icon: "Lightbulb"
+    }
+  ],
+
+  interests: [
+    {
+      name: "Rapid Buildathons & Hackathons",
+      tagline: "Building autonomous agents & AI prototypes under time constraints.",
+      icon: "Zap"
+    },
+    {
+      name: "Exploring AI Ethics & Policy",
+      tagline: "Keeping up with LLM research papers, agentic workflows, and GenAI safety.",
+      icon: "BookOpen"
+    },
+    {
+      name: "UI/UX Design Aesthetics",
+      tagline: "Crafting modern, clean, user-centric web interfaces with crisp typography.",
+      icon: "Palette"
+    },
+    {
+      name: "Mentorship & Community Coordination",
+      tagline: "Helping peers with DSA concepts, competitive programming, and tech events.",
+      icon: "HeartHandshake"
+    }
+  ],
+
   projects: [
     {
       id: "healpipe-asea",

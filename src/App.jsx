@@ -6,6 +6,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Achievements from './components/Achievements';
+import Interests from './components/Interests';
 import Education from './components/Education';
 import ResumeCTA from './components/ResumeCTA';
 import Contact from './components/Contact';
@@ -13,7 +14,7 @@ import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="relative min-h-screen bg-[#FAFAFC] text-slate-800 antialiased overflow-x-hidden selection:bg-pink-200 selection:text-pink-900">
+    <div className="relative min-h-screen bg-[#FAFAFC] text-slate-800 antialiased overflow-x-hidden selection:bg-blue-200 selection:text-blue-900">
       {/* Interactive Neural Background Canvas */}
       <BackgroundAICanvas />
 
@@ -27,6 +28,7 @@ export default function App() {
         <Skills />
         <Projects />
         <Achievements />
+        <Interests />
         <Education />
         <ResumeCTA />
         <Contact />
