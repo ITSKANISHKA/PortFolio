@@ -103,26 +103,37 @@ export const portfolioData = {
     }
   ],
 
+  music: {
+    title: "Those Eyes",
+    artist: "John Mayer",
+    badge: "CURRENTLY LISTENING TO",
+    audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" // Sample audio playback for interactive click
+  },
+
   interests: [
     {
-      name: "Rapid Buildathons & Hackathons",
-      tagline: "Building autonomous agents & AI prototypes under time constraints.",
-      icon: "Zap"
+      name: "Currently Exploring: Political Side",
+      tagline: "Deep diving into geopolitics, international relations, political philosophy, and policy dynamics.",
+      icon: "Globe",
+      type: "exploring"
     },
     {
-      name: "Exploring AI Ethics & Policy",
-      tagline: "Keeping up with LLM research papers, agentic workflows, and GenAI safety.",
-      icon: "BookOpen"
+      name: "Traveling & Exploring Places",
+      tagline: "Exploring new cultures, landscapes, and road trips across different regions.",
+      icon: "Plane",
+      type: "hobby"
     },
     {
-      name: "UI/UX Design Aesthetics",
-      tagline: "Crafting modern, clean, user-centric web interfaces with crisp typography.",
-      icon: "Palette"
+      name: "Culinary & Cooking Experiments",
+      tagline: "Crafting fusion recipes, cooking comfort foods, and experimenting in the kitchen.",
+      icon: "Utensils",
+      type: "hobby"
     },
     {
-      name: "Mentorship & Community Coordination",
-      tagline: "Helping peers with DSA concepts, competitive programming, and tech events.",
-      icon: "HeartHandshake"
+      name: "Rapid Buildathons & Prototyping",
+      tagline: "Building autonomous agents & innovative AI prototypes under time constraints.",
+      icon: "Zap",
+      type: "hobby"
     }
   ],
 

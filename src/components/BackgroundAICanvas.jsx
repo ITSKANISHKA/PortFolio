@@ -23,12 +23,12 @@ export default function BackgroundAICanvas() {
     window.addEventListener('resize', handleResize);
 
     let nodes = [];
-    const nodeCount = Math.min(Math.floor(width / 22), 45);
+    const nodeCount = Math.min(Math.floor(width / 20), 50);
 
     const mouse = {
       x: null,
       y: null,
-      radius: 140
+      radius: 150
     };
 
     const handleMouseMove = (e) => {
@@ -48,11 +48,18 @@ export default function BackgroundAICanvas() {
       constructor() {
         this.x = Math.random() * width;
         this.y = Math.random() * height;
-        this.vx = (Math.random() - 0.5) * 0.4;
-        this.vy = (Math.random() - 0.5) * 0.4;
-        this.radius = Math.random() * 2.2 + 1.2;
-        // Electric Blue / Cyan soft nodes
-        this.color = Math.random() > 0.45 ? 'rgba(37, 99, 235, 0.35)' : 'rgba(6, 182, 212, 0.35)';
+        this.vx = (Math.random() - 0.5) * 0.45;
+        this.vy = (Math.random() - 0.5) * 0.45;
+        this.radius = Math.random() * 2.5 + 1.8;
+        // Darker, high-contrast Obsidian & Dark Blue nodes
+        const rand = Math.random();
+        if (rand < 0.4) {
+          this.color = 'rgba(15, 23, 42, 0.75)'; // Obsidian Slate
+        } else if (rand < 0.8) {
+          this.color = 'rgba(29, 78, 216, 0.75)'; // Deep Royal Blue
+        } else {
+          this.color = 'rgba(2, 132, 199, 0.75)'; // Sapphire Cyan
+        }
       }
 
       update() {
@@ -68,8 +75,8 @@ export default function BackgroundAICanvas() {
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < mouse.radius) {
             const force = (mouse.radius - dist) / mouse.radius;
-            this.x -= (dx / dist) * force * 1.2;
-            this.y -= (dy / dist) * force * 1.2;
+            this.x -= (dx / dist) * force * 1.4;
+            this.y -= (dy / dist) * force * 1.4;
           }
         }
       }
@@ -103,13 +110,14 @@ export default function BackgroundAICanvas() {
           const dy = nodes[i].y - nodes[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
 
-          if (dist < 130) {
-            const alpha = (1 - dist / 130) * 0.18;
+          if (dist < 140) {
+            // Darker, bolder connecting lines
+            const alpha = (1 - dist / 140) * 0.45;
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
-            ctx.strokeStyle = `rgba(59, 130, 246, ${alpha})`;
-            ctx.lineWidth = 0.8;
+            ctx.strokeStyle = `rgba(15, 23, 42, ${alpha})`;
+            ctx.lineWidth = 1.1;
             ctx.stroke();
           }
         }
@@ -131,7 +139,7 @@ export default function BackgroundAICanvas() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-0 opacity-80"
+      className="fixed inset-0 pointer-events-none z-0 opacity-95"
     />
   );
 }
