@@ -161,7 +161,7 @@ export const portfolioData = {
         "Autonomous debugging and validation workflow execution"
       ],
       github: "https://github.com/ITSKANISHKA",
-      demo: "https://github.com/ITSKANISHKA",
+      demo: "https://healpipe.vercel.app/",
       gradient: "from-blue-600/10 via-cyan-500/10 to-slate-900/10",
       accentColor: "#2563EB"
     },
