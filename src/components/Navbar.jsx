@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sparkles, FileText } from 'lucide-react';
+import { Menu, X, Sparkles, FileText, Github, Linkedin } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 const navItems = [
@@ -13,6 +13,7 @@ const navItems = [
 ];
 
 export default function Navbar() {
+  const { github, linkedin } = portfolioData.personal;
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -102,13 +103,31 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Action CTAs */}
-          <div className="hidden md:flex items-center gap-3">
+          {/* Action CTAs & Top Social Links */}
+          <div className="hidden md:flex items-center gap-2.5">
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-xl text-slate-700 hover:bg-slate-900 hover:text-white border border-slate-200 transition-all shadow-2xs"
+              title="GitHub"
+            >
+              <Github className="w-4 h-4" />
+            </a>
+            <a
+              href={linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-xl text-slate-700 hover:bg-[#0A66C2] hover:text-white border border-slate-200 transition-all shadow-2xs"
+              title="LinkedIn"
+            >
+              <Linkedin className="w-4 h-4" />
+            </a>
             <a
               href="/Kanishka_Resume.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-slate-900 border border-slate-200/80 transition-all shadow-xs"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-slate-900 border border-slate-200/80 transition-all shadow-xs"
             >
               <FileText className="w-3.5 h-3.5" />
               Resume
@@ -156,6 +175,24 @@ export default function Navbar() {
               );
             })}
             <div className="pt-2 border-t border-slate-100 flex flex-col gap-2">
+              <div className="flex items-center gap-2 justify-center py-1">
+                <a
+                  href={github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2.5 rounded-xl bg-slate-100 text-slate-800 font-bold text-xs flex items-center gap-1.5"
+                >
+                  <Github className="w-4 h-4" /> GitHub
+                </a>
+                <a
+                  href={linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2.5 rounded-xl bg-blue-50 text-blue-700 font-bold text-xs flex items-center gap-1.5"
+                >
+                  <Linkedin className="w-4 h-4" /> LinkedIn
+                </a>
+              </div>
               <a
                 href="/Kanishka_Resume.html"
                 target="_blank"
