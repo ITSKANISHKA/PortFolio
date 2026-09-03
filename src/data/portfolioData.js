@@ -105,7 +105,7 @@ export const portfolioData = {
 
   music: {
     title: "Those Eyes",
-    artist: "John Mayer",
+    artist: "New West",
     badge: "CURRENTLY LISTENING TO",
     audioSrc: "https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112191.mp3"
   },
@@ -190,7 +190,7 @@ export const portfolioData = {
       subtitle: "Multi-User E-Commerce Architecture",
       badge: "Scalable Backend Architecture",
       tech: ["React", "Node.js", "Express.js", "MongoDB"],
-      shortDescription: "A full-stack multi-user e-commerce platform featuring 10+ core modules including authentication, cart, wishlist, orders, and product management.",
+      shortDescription: "A full-stack multi-user e-commerce application supporting product management, reviews, authentication, and core marketplace workflows.",
       problemSolved: "Engineered scalable multi-user architecture supporting 1,000+ users with product search, filtering, sorting, and pagination across 500+ records.",
       highlights: [
         "10+ core modules (Authentication, Cart, Wishlist, Orders, Product management)",
