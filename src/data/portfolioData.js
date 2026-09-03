@@ -107,33 +107,41 @@ export const portfolioData = {
     title: "Those Eyes",
     artist: "John Mayer",
     badge: "CURRENTLY LISTENING TO",
-    audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" // Sample audio playback for interactive click
+    audioSrc: "https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112191.mp3"
   },
+
+  exploring: [
+    {
+      title: "LLMs, RAG & Autonomous AI Agents",
+      domain: "Computer Science & AI Domain",
+      description: "Deep diving into LLM architectures, agentic workflows, multi-agent orchestration, vector RAG pipelines, and building self-healing AI software engineering agents.",
+      icon: "BrainCircuit",
+      badge: "Tech Domain Research"
+    },
+    {
+      title: "Geopolitics & Policy Dynamics",
+      domain: "Global & Policy Side",
+      description: "Fascinated by international relations, statecraft, global policy dynamics, and understanding political structures shaping technological & economic trends worldwide.",
+      icon: "Globe",
+      badge: "Geopolitics & Policy"
+    }
+  ],
 
   interests: [
     {
-      name: "Currently Exploring: Political Side",
-      tagline: "Deep diving into geopolitics, international relations, political philosophy, and policy dynamics.",
-      icon: "Globe",
-      type: "exploring"
-    },
-    {
       name: "Traveling & Exploring Places",
       tagline: "Exploring new cultures, landscapes, and road trips across different regions.",
-      icon: "Plane",
-      type: "hobby"
+      icon: "Plane"
     },
     {
       name: "Culinary & Cooking Experiments",
       tagline: "Crafting fusion recipes, cooking comfort foods, and experimenting in the kitchen.",
-      icon: "Utensils",
-      type: "hobby"
+      icon: "Utensils"
     },
     {
       name: "Rapid Buildathons & Prototyping",
       tagline: "Building autonomous agents & innovative AI prototypes under time constraints.",
-      icon: "Zap",
-      type: "hobby"
+      icon: "Zap"
     }
   ],
 
